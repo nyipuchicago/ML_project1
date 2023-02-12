@@ -14601,6 +14601,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <li>Decision Tree Regression</li>
 <li>Random Forest</li>
 <li>Linear Regression</li>
+<li>PCA Analysis</li>
+<li>Further Analysis &amp; Conclusion</li>
 </ol>
 
 </div>
@@ -18167,7 +18169,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><font color="red"> Un-comment graphing later: it kept crashing my computer </font></p>
+<p>Un-comment the below for later graphing: my computer would not graph without crashing (the code works, but it takes a lot of processing time/power)</p>
 
 </div>
 </div>
@@ -18358,7 +18360,7 @@ New accuracy score for DT Regressor: 0.475
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><font color="red"> Un-comment graphing later: it kept crashing my computer </font></p>
+<p>Un-comment the below for later graphing: my computer would not graph without crashing (the code works, but it takes a lot of processing time/power)</p>
 
 </div>
 </div>
@@ -19834,76 +19836,6 @@ Training MAE: 0.271; Testing MAE: 0.275
 
 </div>
 
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><font color="red"> Remove this one </font></p>
-<p>Manual linear regression model:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># reg_y = np.vstack(y_train)</span>
-<span class="c1"># reg_X = np.column_stack((np.ones(reg_y.shape), X_train))</span>
-<span class="c1"># beta = np.linalg.inv(reg_X.T @ reg_X) @ reg_X.T @ reg_y</span>
-<span class="c1"># varnames = ['const'] + list(X.columns)</span>
-<span class="c1"># for i in range(beta.shape[0]):</span>
-<span class="c1">#     print("{} {} {}".format(f"({varnames[i]})".ljust(20), f"beta_{i}:".ljust(8), str(round(beta[i][0], 5)).rjust(13)))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><font color="red"> Remove this one </font></p>
-<p>sklearn linear regression model:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># from sklearn.linear_model import LinearRegression</span>
-
-<span class="c1"># lin_reg = LinearRegression().fit(X_train, y_train)</span>
-<span class="c1"># for i in range(len(X.columns)):</span>
-<span class="c1">#     print(f"{X.columns[i]} coefficient: ".ljust(30), f"{round(lin_reg.coef_[i], 4)}".rjust(20))</span>
-
-<span class="c1"># print("Constant:                 ".ljust(30), str(round(lin_reg.intercept_, 4)).rjust(20))</span>
-<span class="c1"># print("Accuracy score (R^2):     ".ljust(30), str(round(lin_reg.score(X_test, y_test), 4)).rjust(20))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div>
@@ -23384,7 +23316,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Creating a summary table of all the model performances:</p>
+<p>Creating a summary table of all the model performances (the below table values are taken from all the best-performing analyses above; suboptimal model-parameter combinations have been excluded):</p>
 
 </div>
 </div>
